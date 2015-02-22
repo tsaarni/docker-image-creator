@@ -25,7 +25,7 @@ fully self-contained Docker container.
 ### Further information
 
 * [docker-image-creator container](https://registry.hub.docker.com/u/tsaarni/docker-image-creator/) - Docker container used by this tool
-* [CentOS Docker build scripts](https://github.com/CentOS/sig-cloud-instance-build/tree/master/docker) - Ready-made kickstart files
-* [ami-creator](https://github.com/katzj/ami-creator) - Basis for this tool, used to create the image files
+* [CentOS Docker build scripts](https://github.com/CentOS/sig-cloud-instance-build/tree/master/docker) - Original idea for this tool and ready-made kickstart files
+* [ami-creator](https://github.com/katzj/ami-creator) - Basis for this tool, creates the image files
 * [sle2docker](https://github.com/SUSE/sle2docker) - Inspiration for creating this tool
 
