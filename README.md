@@ -16,10 +16,15 @@ fully self-contained Docker container.
     docker-image-creator kickstart-file image-name
 
 
-### Examples
+### Example
 
-    wget https://raw.githubusercontent.com/CentOS/sig-cloud-instance-build/master/docker/centos-7.ks
-    docker-image-creator centos-7.ks centos-7
+    $ wget https://raw.githubusercontent.com/CentOS/sig-cloud-instance-build/master/docker/centos-7.ks
+    $ docker-image-creator centos-7.ks centos-7
+    $ docker import - my-centos7-base < centos-7.tar.xz
+    $ docker run --rm -i -t my-centos7-base /bin/bash
+    [root@1ecd80bd71e7 /]# cat /etc/redhat-release 
+    CentOS Linux release 7.0.1406 (Core) 
+    [root@1ecd80bd71e7 /]# 
 
 
 ### Further information
