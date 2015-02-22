@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-DOCKER_CREATOR_APPLIANCE="tsaarni/docker-image-creator:7"
+DOCKER_CREATOR_APPLIANCE="tsaarni/docker-image-creator"
 
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 kickstart-file image-name" >&2
