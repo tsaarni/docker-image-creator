@@ -24,7 +24,6 @@ fully self-contained Docker container.
     $ docker run --rm -i -t my-centos7-base /bin/bash
     [root@1ecd80bd71e7 /]# cat /etc/redhat-release 
     CentOS Linux release 7.0.1406 (Core) 
-    [root@1ecd80bd71e7 /]# 
 
 
 ### Further information
