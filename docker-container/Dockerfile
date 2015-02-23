@@ -4,7 +4,7 @@ MAINTAINER tero.saarni@gmail.com
 # EPEL repository needed for python-imgcreate
 RUN yum install -y epel-release
 
-RUN yum install -y libguestfs-tools-c python-imgcreate git
+RUN yum install -y python-imgcreate git tar xz
 
 RUN git clone https://github.com/katzj/ami-creator.git /usr/local/ami-creator
 
