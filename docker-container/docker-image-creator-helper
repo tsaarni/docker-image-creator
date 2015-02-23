@@ -30,7 +30,7 @@ cd "$WORKDIR"
 echo "Exporting docker image: ${NAME}.tar.xz..."
 mount -o loop "${NAME}.img" /mnt
 tar -C /mnt -c . | xz --best > "${NAME}.tar.xz"
-unmount /mnt
+umount /mnt
 
 chown $CALLERID "${NAME}.tar.xz"
 
