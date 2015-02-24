@@ -27,10 +27,10 @@ cd "$WORKDIR"
 
 /usr/local/ami-creator/ami_creator/ami_creator.py -c "$KICKSTART" -n "$NAME"
 
-echo "Exporting docker image: ${NAME}.tar.xz..."
+echo "Exporting docker image: ${NAME}.tar.gz..."
 mount -o loop "${NAME}.img" /mnt
-tar -C /mnt -c . | xz --best > "${NAME}.tar.xz"
+tar --numeric-owner -C /mnt -c . | gzip --best > "${NAME}.tar.gz"
 umount /mnt
 
-chown $CALLERID "${NAME}.tar.xz"
+chown $CALLERID "${NAME}.tar.gz"
 

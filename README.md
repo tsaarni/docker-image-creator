@@ -20,7 +20,7 @@ fully self-contained Docker container.
 
     $ wget https://raw.githubusercontent.com/CentOS/sig-cloud-instance-build/master/docker/centos-7.ks
     $ docker-image-creator centos-7.ks centos-7
-    $ docker import - my-centos7-base < centos-7.tar.xz
+    $ docker import - my-centos7-base < centos-7.tar.gz
     $ docker run --rm -i -t my-centos7-base /bin/bash
     [root@1ecd80bd71e7 /]# cat /etc/redhat-release 
     CentOS Linux release 7.0.1406 (Core) 

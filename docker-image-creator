@@ -34,8 +34,8 @@ if [ ! -r "$KICKSTART" ]; then
     exit 1
 fi
 
-if [ -r "${NAME}.tar.xz" ]; then
-    echo "Error: Target image file already exists: ${NAME}.tar.xz" >&2
+if [ -r "${NAME}.tar.gz" ]; then
+    echo "Error: Target image file already exists: ${NAME}.tar.gz" >&2
     exit 1
 fi
 
@@ -54,8 +54,8 @@ cp "$KICKSTART" $WORKDIR
 docker run --rm -v $WORKDIR:$WORKDIR --privileged $DOCKER_CREATOR_APPLIANCE \
   "$WORKDIR" "$CALLERID" "$KICKSTART_BASENAME" "$NAME" 
 
-if [ -r "${WORKDIR}/${NAME}.tar.xz" ]; then
-    mv "${WORKDIR}/${NAME}.tar.xz" .
+if [ -r "${WORKDIR}/${NAME}.tar.gz" ]; then
+    mv "${WORKDIR}/${NAME}.tar.gz" .
 else
     echo "Error: Image creation failed." >&2
     exit 1
@@ -68,5 +68,5 @@ echo "Image created successfully."
 echo ""
 echo "Run following command to import the image into docker:"
 echo ""
-echo "    docker import - [repository[:tag]] < ${NAME}.tar.xz"
+echo "    docker import - [repository[:tag]] < ${NAME}.tar.gz"
 echo ""
